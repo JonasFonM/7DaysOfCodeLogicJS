@@ -1,5 +1,30 @@
 body{
-    background-color: midnightblue;
+    background-color: rgba(41, 39, 39, 0);
     color: white;
     margin: auto;
 }
+
+.header {
+    background-color: rgb(1, 1, 56);
+    padding: 20px;
+    text-align: center;
+  }
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
