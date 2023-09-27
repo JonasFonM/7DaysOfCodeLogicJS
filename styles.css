@@ -1,31 +1,68 @@
+* {
+  box-sizing: border-box;
+  font-family:"Chakra Petch",sans-serif;
+  color: #D7F9FF;
+  background: #01080E;
+}
+
 .header {
-    background-color: rgb(1, 1, 56);
+    background: #01080E;
     padding: 20px;
     text-align: center;
+    font-size: 60px;
   }
 
 .topnav {
+    margin-left: 15%;
+    margin-right: 15%;
     overflow: hidden;
-    background-color: #333;
+    background-color: cadetblue;
   }
   
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    background-color: #ddd;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    color: darkcyan;
   }
 
-  .main-page {
-    margin-top: 20px; 
-    text-align: center; 
-    background-color: rgba(41, 39, 39, 0); 
-    color: ghostwhite;
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    max-width: 1200px;
+}  
+
+.column {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  background-color: #01080E;
+  color: white;
   }
+
+.column h1{
+  text-align: center;
+}  
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}  
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
