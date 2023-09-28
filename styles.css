@@ -5,6 +5,10 @@
   background: #01080E;
 }
 
+#home {
+  float: right;
+}
+
 .header {
     background: #01080E;
     padding: 20px;
