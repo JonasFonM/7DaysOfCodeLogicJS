@@ -96,7 +96,7 @@ h1 {
 }
 
 @media screen and (max-width: 800px) {
-  .col {   
+  [class*="col-"] {   
     width: 100%;
     padding: 0;
   }
