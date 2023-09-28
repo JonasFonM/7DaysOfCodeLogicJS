@@ -14,7 +14,7 @@ const greetings = "Olá " + nome + ", você tem " + idade + " anos e já está a
 
 var congrats = ""
 
-if(gosta.toUpperCase == "SIM"){
+if(gosta.toUpperCase() == "SIM"){
     congrats = "Muito bom! Continue estudado e você terá muito sucesso."
     } else{
         congrats = "Ahh que pena... Já tentou aprender outras linguagens?"
