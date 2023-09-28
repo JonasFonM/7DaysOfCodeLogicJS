@@ -55,7 +55,30 @@
 
 .column h1{
   text-align: center;
-}  
+}
+
+.halfcolumn {
+  float: left;
+  padding: 20px;
+  width: 50%;
+  height: auto;
+  background-color: #01080E;
+  color: white;
+  }
+
+
+.button {
+  background-color: #008CBA;; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
