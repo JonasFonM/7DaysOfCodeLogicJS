@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
   font-family:"Chakra Petch",sans-serif;
+}
+
+html {
   color: #D7F9FF;
   background: #01080E;
 }
@@ -72,21 +75,28 @@ h1 {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
+.menu {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .button {
   background-color: #008CBA;; 
   border: none;
   color: white;
-  padding: 16px 12px;
+  padding: 20px 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 30px;
-  margin: 4px 2px;
+  font-size: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+  .col {   
     width: 100%;
     padding: 0;
   }
