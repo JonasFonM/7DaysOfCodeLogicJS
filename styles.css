@@ -59,6 +59,7 @@
 
 .halfcolumn {
   float: left;
+  align-content: center;
   padding: 20px;
   width: 50%;
   height: auto;
@@ -71,7 +72,7 @@
   background-color: #008CBA;; 
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 5% 5%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
