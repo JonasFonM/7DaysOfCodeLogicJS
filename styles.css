@@ -5,6 +5,10 @@
   background: #01080E;
 }
 
+h1 {
+  text-align: center;
+}
+
 #home {
   float: right;
 }
