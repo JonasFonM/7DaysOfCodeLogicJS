@@ -18,15 +18,15 @@ showMenu1 = () => document.getElementById('m1').style.visibility = "visible";
 
 hideMenu2 = () => document.getElementById('m2').style.visibility = "hidden";
 
-showMenu2 = () => document.getElementById('m2').style.visibility = "visible";
+showMenu2 = () => document.getElementById('m2').style.display = "block";
 
-hideMenu3 = () => document.getElementById('m3').style.visibility = "hidden";
+hideMenu3 = () => document.getElementById('m3').style.display = "none";
 
-showMenu3 = () => document.getElementById('m3').style.visibility = "visible";
+showMenu3 = () => document.getElementById('m3').style.display = "block";
 
-hideMenu4 = () => document.getElementById('m4').style.visibility = "hidden";
+hideMenu4 = () => document.getElementById('m4').style.display = "none";
 
-showMenu4 = () => document.getElementById('m4').style.visibility = "visible";
+showMenu4 = () => document.getElementById('m4').style.display = "block";
 
 function button1() {
     area = "Front-End";
