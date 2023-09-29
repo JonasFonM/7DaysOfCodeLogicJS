@@ -103,6 +103,6 @@ function showResults() {
     document.getElementById('spec').innerHTML = spec;
 
     for (let index = 0; index < listaTech.length; index++) {
-    document.getElementById('techs').innerHTML += (listaTech[index]+" ");
+    document.getElementById('techs').innerHTML += (listaTech[index]+"\n");
     }
 }

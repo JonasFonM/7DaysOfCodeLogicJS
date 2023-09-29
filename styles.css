@@ -12,6 +12,10 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+}
+
 #home {
   float: right;
 }
@@ -88,7 +92,9 @@ h1 {
   padding: 20px 15px;
   text-align: center;
   text-decoration: none;
-  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
   display: block;
   margin-left: auto;
   margin-right: auto;
