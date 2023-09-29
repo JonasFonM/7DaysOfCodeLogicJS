@@ -1,8 +1,9 @@
-var area = "";
-var lang = "";
-var spec = "";
+let area, lang, spec;
+let listaTech = [];
 var i = 0;
-var listaTech = [];
+
+const form = document.getElementById('f1');
+const inputField = document.getElementById('inputField');
 
 const question2 = "Qual linguagem você gostaria de aprender?";
 const question3 = "Você pretende se especializar em "+lang+" ou se tornar Fullstack?";
@@ -14,6 +15,13 @@ function toggleBlock(itemId,displayMode) {
     const item = document.getElementById(itemId);
   if (item) {
     item.style.display = displayMode;
+  }
+}
+
+function toggleVis(itemId,visMode) {
+    const item = document.getElementById(itemId);
+  if (item) {
+    item.style.visibility = visMode;
   }
 }
 
@@ -31,14 +39,14 @@ changeQ6 = () => document.getElementById('question').innerHTML = question6;
 function button1() {
     area = "Front-End";
     changeQ2();
-    toggleBlock('m1','none');
+    toggleVis('m1','hidden');
     toggleBlock('m2','block');
 }
 
 function button2(){
     area = "Back-End";
     changeQ2();
-    toggleBlock('m1','none');
+    toggleVis('m1','hidden');
     toggleBlock('m3','block');
 }
 
@@ -88,8 +96,8 @@ function button9(){
     spec = "Fullstack";
     moreTech = true;
     changeQ5();    
-    toggleBlock('m5','none');
-    toggleBlock('f1','block'); 
+    toggleVis('m5','hidden');
+    toggleVis('f1','visible'); 
 }
 
 function button10() {
@@ -99,9 +107,11 @@ function button10() {
     toggleBlock('r1','block');
 }
 
-function addTech() {
-    listaTech[i] = document.getElementById('input').value; 
+form.addEventListener('submit', function(event)
+{   event.preventDefault();
+    listaTech[i] = inputField.value;
     i++;
-    toggleBlock('f1','none');
-    toggleBlock('m5','block');
-}
+    console.log(listaTech[i]);
+    toggleVis('f1','hidden');
+    toggleVis('m5','visible');
+});
