@@ -14,13 +14,6 @@ function toggleBlock(itemId,displayMode) {
   }
 }
 
-function toggleVis(itemId,visMode) {
-    const item = document.getElementById(itemId);
-  if (item) {
-    item.style.visibility = visMode;
-  }
-}
-
 changeQ2 = () => document.getElementById('question').innerHTML = question2;
 
 changeQ3 = () => document.getElementById('question').innerHTML = question3;
@@ -32,14 +25,14 @@ changeQ5 = () => document.getElementById('question').innerHTML = question5;
 function button1() {
     area = "Front-End";
     changeQ2();
-    toggleVis('m1','hidden');
+    toggleBlock('m1','none');
     toggleBlock('m2','block');
 }
 
 function button2(){
     area = "Back-End";
     changeQ2();
-    toggleVis('m1','hidden');
+    toggleBlock('m1','none');
     toggleBlock('m3','block');
 }
 
@@ -72,17 +65,17 @@ function button6(){
 }
 
 function button7() {
-    spec = lang;
+    spec = area;
     changeQ4();
     toggleBlock('m4','none');
-    toggleVis('m5','visible');
+    toggleBlock('m5','block');
 }
 
 function button8(){
     spec = "Fullstack";
     changeQ4();     
     toggleBlock('m4','none');
-    toggleVis('m5','visible');
+    toggleBlock('m5','block');
 }
 
 function button9(){
