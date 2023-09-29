@@ -16,7 +16,7 @@ hideMenu1 = () => document.getElementById('m1').style.visibility = "hidden";
 
 showMenu1 = () => document.getElementById('m1').style.visibility = "visible";
 
-hideMenu2 = () => document.getElementById('m2').style.visibility = "hidden";
+hideMenu2 = () => document.getElementById('m2').style.display = "none";
 
 showMenu2 = () => document.getElementById('m2').style.display = "block";
 
