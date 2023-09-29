@@ -2,14 +2,10 @@ let area ="", lang ="", spec = "";
 const listaTech = [];
 var i = 0;
 
-const form = document.getElementById('form1');
-const inputField = document.getElementById('inputField');
-
 const question2 = "Qual linguagem você gostaria de aprender?";
 const question3 = "Você pretende se especializar em "+lang+" ou se tornar Fullstack?";
 const question4 = "Tem mais alguma tecnologia que gostaria de aprender?";
-const question5 = "Qual tecnologia?";
-const question6 = "Confira seu caminho no aprendizado Tech:";
+const question5 = "Confira seu caminho no aprendizado Tech:";
 
 function toggleBlock(itemId,displayMode) {
     const item = document.getElementById(itemId);
@@ -32,9 +28,6 @@ changeQ3 = () => document.getElementById('question').innerHTML = question3;
 changeQ4 = () => document.getElementById('question').innerHTML = question4;
 
 changeQ5 = () => document.getElementById('question').innerHTML = question5;
-
-changeQ6 = () => document.getElementById('question').innerHTML = question6;
-
 
 function button1() {
     area = "Front-End";
@@ -93,16 +86,14 @@ function button8(){
 }
 
 function button9(){
-    spec = "Fullstack";
-    moreTech = true;
-    changeQ5();    
+    listaTech[i] = prompt("Qual tecnologia?");
+    i++;
     toggleVis('m5','hidden');
     toggleVis('f1','visible'); 
 }
 
 function button10() {
-    spec = lang;
-    changeQ6();
+    changeQ5();
     toggleBlock('m5','none');
     toggleBlock('r1','block');
 }
