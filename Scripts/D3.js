@@ -92,6 +92,17 @@ function button9(){
 
 function button10() {
     changeQ5();
+    showResults();
     toggleBlock('m5','none');
     toggleBlock('r1','block');
+}
+
+function showResults() {
+    document.getElementById('area').innerHTML = area;
+    document.getElementById('lang').innerHTML = lang;
+    document.getElementById('spec').innerHTML = spec;
+
+    for (let index = 0; index < listaTech.length; index++) {
+    document.getElementById('techs').innerHTML += listaTech[index];
+    }
 }
