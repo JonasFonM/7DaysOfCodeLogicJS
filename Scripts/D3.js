@@ -1,13 +1,8 @@
 var area = "";
 var lang = "";
 var spec = "";
-var confirm = "Sim";
-var tech = "";
+var moreTech = true;
 var listaTech = [];
-var i = 0;
-var questionConfig = "";
-var b1Config = "";
-var b2Config = "";
 
 const question2 = "Qual linguagem você gostaria de aprender?";
 const question3 = "Você pretende se especializar em "+lang+" ou se tornar Fullstack?";
@@ -17,64 +12,64 @@ hideForm = () => document.getElementById('f1').style.visibility = "hidden";
 
 showForm = () => document.getElementById('f1').style.visibility = "visible";
 
-hideButtons = () => document.getElementById('m1').style.visibility = "hidden";
+hideMenu1 = () => document.getElementById('m1').style.visibility = "hidden";
 
-showButtons = () => document.getElementById('m1').style.visibility = "visible";
+showMenu1 = () => document.getElementById('m1').style.visibility = "visible";
 
-function buttonConfig(questionConfig, b1Config, b2Config){
-    document.getElementById('question').innerHTML = questionConfig;
-    document.getElementById('b1').innerHTML = b1Config;
-    document.getElementById('b2').innerHTML = b2Config;
-}
+hideMenu2 = () => document.getElementById('m2').style.visibility = "hidden";
+
+showMenu2 = () => document.getElementById('m2').style.visibility = "visible";
+
+hideMenu3 = () => document.getElementById('m3').style.visibility = "hidden";
+
+showMenu3 = () => document.getElementById('m3').style.visibility = "visible";
+
+hideMenu4 = () => document.getElementById('m4').style.visibility = "hidden";
+
+showMenu4 = () => document.getElementById('m4').style.visibility = "visible";
 
 function button1() {
-        
-    if(area == "") {
-        area = "Front-End";
-        buttonConfig(question2,"React","Vue");
-    } 
-    else if(area == "Front-End" && lang == ""){
-        lang = "React";
-        buttonConfig(question3, lang, "Fullstack");
-    } 
-    else if(area == "Back-End" && lang == ""){
-        lang = "C#";
-        buttonConfig(question3, lang, "Fullstack");
-    }
-    else if(lang != "" && spec == ""){
-        spec = lang;
-        buttonConfig(question4,"Sim","Não")
-    }
-     else if(spec != ""){
-       showForm();
-       hideButtons();
-    }
+    area = "Front-End";
+    hideMenu1();
+    showMenu2();
 }
 
 function button2(){
-    if(area == "") {
-        area = "Back-End";        
-        buttonConfig(question2,"C#","Java");
-    }
-    else if(area == "Front-End" && lang == ""){
-        lang = "Vue";
-        buttonConfig(question3, lang, "Fullstack");
-    } 
-    else if(area == "Back-End" && lang == ""){
-        lang = "Java";
-        buttonConfig(question3, lang, "Fullstack");
-    }
-    else if(lang != "" && spec == ""){
-        spec = lang;
-        buttonConfig(question4,"Sim","Não")
-    } 
-    else if(spec != ""){
-        hideForm();
-        hideButtons();
-        }
+    area = "Back-End";
+    hideMenu1();
+    showMenu3();
 }
 
+function button3() {
+    lang = "React";
+    hideMenu2();
+    showMenu4();
+}
+
+function button4(){
+    lang = "Vue";     
+    hideMenu2();
+    showMenu4();
+}
+
+function button5() {
+    lang = "C#";
+    hideMenu3();
+    showMenu4();
+}
+
+function button6(){
+    lang = "Java";     
+    hideMenu3();
+    showMenu4();
+}
+
+/*
 function addTech() {
+    var i = 0;
+    do {
     listaTech[i] = document.getElementById('input').value; 
     i++;         
-}
+    } while (moreTech == true);
+         
+}*/
