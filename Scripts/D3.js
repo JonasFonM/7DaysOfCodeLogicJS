@@ -88,9 +88,6 @@ function button8(){
 function button9(){
     listaTech[i] = prompt("Qual tecnologia?");
     i++;
-    for (let index = 0; index < listaTech.length; index++) {
-        console.log(listaTech[index]);
-    }
 }
 
 function button10() {
