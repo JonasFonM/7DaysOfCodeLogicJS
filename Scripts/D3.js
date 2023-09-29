@@ -1,36 +1,21 @@
 var area = "";
 var lang = "";
 var spec = "";
-var moreTech = true;
+var i = 0;
 var listaTech = [];
 
 const question2 = "Qual linguagem você gostaria de aprender?";
 const question3 = "Você pretende se especializar em "+lang+" ou se tornar Fullstack?";
 const question4 = "Tem mais alguma tecnologia que gostaria de aprender?";
+const question5 = "Qual tecnologia?";
+const question6 = "Confira seu caminho no aprendizado Tech:";
 
-hideForm = () => document.getElementById('f1').style.visibility = "hidden";
-
-showForm = () => document.getElementById('f1').style.visibility = "visible";
-
-hideMenu1 = () => document.getElementById('m1').style.visibility = "hidden";
-
-showMenu1 = () => document.getElementById('m1').style.visibility = "visible";
-
-hideMenu2 = () => document.getElementById('m2').style.display = "none";
-
-showMenu2 = () => document.getElementById('m2').style.display = "block";
-
-hideMenu3 = () => document.getElementById('m3').style.display = "none";
-
-showMenu3 = () => document.getElementById('m3').style.display = "block";
-
-hideMenu4 = () => document.getElementById('m4').style.display = "none";
-
-showMenu4 = () => document.getElementById('m4').style.display = "block";
-
-hideMenu5 = () => document.getElementById('m5').style.display = "none";
-
-showMenu5 = () => document.getElementById('m5').style.display = "block";
+function toggleBlock(itemId,displayMode) {
+    const item = document.getElementById(itemId);
+  if (item) {
+    item.style.display = displayMode;
+  }
+}
 
 changeQ2 = () => document.getElementById('question').innerHTML = question2;
 
@@ -38,68 +23,85 @@ changeQ3 = () => document.getElementById('question').innerHTML = question3;
 
 changeQ4 = () => document.getElementById('question').innerHTML = question4;
 
+changeQ5 = () => document.getElementById('question').innerHTML = question5;
+
+changeQ6 = () => document.getElementById('question').innerHTML = question6;
+
 
 function button1() {
     area = "Front-End";
     changeQ2();
-    hideMenu1();
-    showMenu2();
+    toggleBlock('m1','none');
+    toggleBlock('m2','block');
 }
 
 function button2(){
     area = "Back-End";
     changeQ2();
-    hideMenu1();
-    showMenu3();
+    toggleBlock('m1','none');
+    toggleBlock('m3','block');
 }
 
 function button3() {
     lang = "React";
     changeQ3();
-    hideMenu2();
-    showMenu4();
+    toggleBlock('m2','none');
+    toggleBlock('m4','block');
 }
 
 function button4(){
     lang = "Vue";
-    changeQ3();     
-    hideMenu2();
-    showMenu4();
+    changeQ3();
+    toggleBlock('m2','none');
+    toggleBlock('m4','block');
 }
 
 function button5() {
     lang = "C#";
     changeQ3();
-    hideMenu3();
-    showMenu4();
+    toggleBlock('m3','none');
+    toggleBlock('m4','block');
 }
 
 function button6(){
     lang = "Java";
-    changeQ3();     
-    hideMenu3();
-    showMenu4();
+    changeQ3();   
+    toggleBlock('m3','none');
+    toggleBlock('m4','block');  
 }
 
 function button7() {
     spec = lang;
     changeQ4();
-    hideMenu4();
-    showMenu5();
+    toggleBlock('m4','none');
+    toggleBlock('m5','block');
 }
 
 function button8(){
     spec = "Fullstack";
     changeQ4();     
-    hideMenu4();
-    showMenu5();
+    toggleBlock('m4','none');
+    toggleBlock('m5','block');
+}
+
+function button9(){
+    spec = "Fullstack";
+    moreTech = true;
+    changeQ5();    
+    toggleBlock('m5','none');
+    toggleBlock('f1','block'); 
+}
+
+function button10() {
+    spec = lang;
+    changeQ6();
+    toggleBlock('m5','none');
+    toggleBlock('r1','block');
 }
 
 function addTech() {
-    var i = 0;
-    do {
     listaTech[i] = document.getElementById('input').value; 
-    i++;         
-    } while (moreTech == true);
-         
+    i++;
+    toggleBlock('f1','none');
+    toggleBlock('m5','block');
 }
