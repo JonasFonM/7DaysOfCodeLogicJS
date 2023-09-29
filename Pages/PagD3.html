@@ -20,15 +20,24 @@
                 <a href="./PagD3.html">Dia 3</a>
 
             </div>
+            
+            <div class="row" id="f1" style="visibility: hidden;">
+                <div class="col-12">
+                    <form onsubmit="addTech();">
+                        <input id="input" type="text" name="tech" placeholder="Tecnologia">
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </div>
+            </div>
 
-            <div class="row">
+            <div class="row" id="m1">
 
-                <div class="col-6">
-                    <button type="button" onclick="area = 'Front-End'; console.log(area);">Front-End</button>
+                <div class="col-6" id="b1">
+                    <button type="button" onclick="button1();">Front-End</button>
                 </div>
 
-                <div class="col-6">
-                    <button type="button" onclick="area = 'Back-End'; console.log(area);">Back-End</button>
+                <div class="col-6" id="b2">
+                    <button type="button" onclick="button2();">Back-End</button>
                 </div>
 
             </div>
