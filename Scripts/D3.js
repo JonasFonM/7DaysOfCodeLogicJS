@@ -82,14 +82,14 @@ function button7() {
     spec = lang;
     changeQ4();
     toggleBlock('m4','none');
-    toggleBlock('m5','block');
+    toggleVis('m5','visible');
 }
 
 function button8(){
     spec = "Fullstack";
     changeQ4();     
     toggleBlock('m4','none');
-    toggleBlock('m5','block');
+    toggleVis('m5','visible');
 }
 
 function button9(){
