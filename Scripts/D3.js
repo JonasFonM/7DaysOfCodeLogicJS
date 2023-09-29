@@ -28,43 +28,73 @@ hideMenu4 = () => document.getElementById('m4').style.display = "none";
 
 showMenu4 = () => document.getElementById('m4').style.display = "block";
 
+hideMenu5 = () => document.getElementById('m5').style.display = "none";
+
+showMenu5 = () => document.getElementById('m5').style.display = "block";
+
+changeQ2 = () => document.getElementById('question').innerHTML = question2;
+
+changeQ3 = () => document.getElementById('question').innerHTML = question3;
+
+changeQ4 = () => document.getElementById('question').innerHTML = question4;
+
+
 function button1() {
     area = "Front-End";
+    changeQ2();
     hideMenu1();
     showMenu2();
 }
 
 function button2(){
     area = "Back-End";
+    changeQ2();
     hideMenu1();
     showMenu3();
 }
 
 function button3() {
     lang = "React";
+    changeQ3();
     hideMenu2();
     showMenu4();
 }
 
 function button4(){
-    lang = "Vue";     
+    lang = "Vue";
+    changeQ3();     
     hideMenu2();
     showMenu4();
 }
 
 function button5() {
     lang = "C#";
+    changeQ3();
     hideMenu3();
     showMenu4();
 }
 
 function button6(){
-    lang = "Java";     
+    lang = "Java";
+    changeQ3();     
     hideMenu3();
     showMenu4();
 }
 
-/*
+function button7() {
+    spec = lang;
+    changeQ4();
+    hideMenu4();
+    showMenu5();
+}
+
+function button8(){
+    spec = "Fullstack";
+    changeQ4();     
+    hideMenu4();
+    showMenu5();
+}
+
 function addTech() {
     var i = 0;
     do {
@@ -72,4 +102,4 @@ function addTech() {
     i++;         
     } while (moreTech == true);
          
-}*/
+}
