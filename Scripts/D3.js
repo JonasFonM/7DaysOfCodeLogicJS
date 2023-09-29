@@ -1,5 +1,5 @@
-let area, lang, spec;
-let listaTech = [];
+let area ="", lang ="", spec = "";
+const listaTech = [];
 var i = 0;
 
 const form = document.getElementById('f1');
@@ -106,12 +106,3 @@ function button10() {
     toggleBlock('m5','none');
     toggleBlock('r1','block');
 }
-
-form.addEventListener('submit', function(event)
-{   event.preventDefault();
-    listaTech[i] = inputField.value;
-    i++;
-    console.log(listaTech[i]);
-    toggleVis('f1','hidden');
-    toggleVis('m5','visible');
-});
