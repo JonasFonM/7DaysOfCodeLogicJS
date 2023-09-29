@@ -2,7 +2,7 @@ let area ="", lang ="", spec = "";
 const listaTech = [];
 var i = 0;
 
-const form = document.getElementById('f1');
+const form = document.getElementById('form1');
 const inputField = document.getElementById('inputField');
 
 const question2 = "Qual linguagem você gostaria de aprender?";
