@@ -88,8 +88,9 @@ function button8(){
 function button9(){
     listaTech[i] = prompt("Qual tecnologia?");
     i++;
-    toggleVis('m5','hidden');
-    toggleVis('f1','visible'); 
+    for (let index = 0; index < listaTech.length; index++) {
+        console.log(listaTech[index]);
+    }
 }
 
 function button10() {
