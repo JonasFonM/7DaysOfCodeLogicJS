@@ -15,10 +15,10 @@ function toggleBlock(itemId,displayMode) {
 }
 
 function guessNum() {
-    i--;
-    msg = 'Você tem '+(i)+'tentativas para adivinhar um número de 0 a 10!';
-    changeT(msg);
     numGuess[i] = prompt("Insira um número de 0 a 10:");
+    i--;
+    msg = 'Você tem '+(i)+' tentativas para adivinhar um número de 0 a 10!';
+    changeT(msg);
 }
 
 function buttonGuess() {
@@ -34,5 +34,5 @@ function buttonGuess() {
         toggleBlock('ans2','block');
         toggleBlock('menu','none');
     }
-    
+       
 }
