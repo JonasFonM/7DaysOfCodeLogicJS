@@ -12,8 +12,6 @@ function buttonGuess(){
     let numGuess = [];
     let msg = '';
     let i = 3;
-
-    console.log(num);
     while (numGuess[i] != num && i > 0) {
         numGuess[i] = prompt("Insira um número de 0 a 10:");
         if (numGuess[i] == num) {
